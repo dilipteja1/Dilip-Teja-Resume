@@ -1,0 +1,256 @@
+%-------------------------
+% Resume in Latex
+% Author : Dilip Teja
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10.9pt]{article}
+\usepackage[T1]{fontenc}
+\fontfamily{Georgia}\selectfont
+\fontseries{m}\selectfont
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+\input{glyphtounicode}
+
+\renewcommand{\bfseries}{\fontseries{b}\selectfont}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.55in}
+\addtolength{\textheight}{1.0in}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \scshape\raggedright\small\textbf
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeEducationheading}[4]{
+\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \hspace{-1pt}\textbf{ \small #1} & \textbf{\small #2} \\
+      \textit{\small #3} & {\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeWorkheading}[4]{
+\item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}  
+      \textbf{ \small #1} | {\small #2} | {\small #3} & {\small \textbf{#4}} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeskill}[2]{
+\item 
+      \textbf{ \small #1} \small : {\small #2}  \vspace{-5pt}\\
+}
+
+\newcommand{\resumeProjectHeading}[3]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{1\textwidth}{l@{\extracolsep{\fill}}r}
+      {\small #1}  {\small #2} | {\small #3}\\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\usepackage{calc} % added
+\newcommand{\resumeSubSubheadingLeft}[2]{% % added
+\begin{description}[leftmargin=!,labelwidth=\widthof{\small\bfseries #1}]
+    \item[\small #1]{\small  #2} \vspace{-7pt}
+\end{description}
+}
+
+
+\newcommand{\resumeSubSubheading}[2]{
+    \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{#1} & \textit{#2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-7pt}}
+\usepackage[T1]{fontenc}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%-----------Introduction-----------
+\begin{center}
+    {\huge \textbf{\textsc{DILIP TEJA}} } \\
+    {Pittsburgh, PA}  ~|~
+            \faPhoneSquare\ +1-412-330-0823 ~|~
+    \href{mailto:tejadilip23898@gmail.com} {\faEnvelopeSquare\ \color{teal}  tejadilip23898@gmail.com} ~|~
+    \href{https://www.linkedin.com/in/dilipteja/}{\faLinkedin\ \color{teal} \underline{dilipteja}} ~|~
+    \href{https://github.com/dilipteja1}{\faGithubSquare\ \color{teal} \underline{dilipteja1}}
+    \vspace{-7pt}
+\end{center}
+
+ %-----------EXPERIENCE-----------
+\section{WORK EXPERIENCE}
+    \resumeSubHeadingListStart
+
+        %MSA experience
+        \resumeWorkheading{Software Engineer Co-op}{\color{teal}\href{https://us.msasafety.com/}{\textbf{MSA - The Safety Company}}}{Cranberry, PA}{Jan 2024 -- Apr 2024}
+        \resumeItemListStart
+            \resumeItem{Architected and deployed a scalable server-side solution using \textbf{WebSockets} and \textbf{Threading}, enabling real-time monitoring of connected plugins, slashing connection latency by over 60 seconds.}
+            \resumeItem{Restructured client-side components into backend, enhancing integration efficiency by 33\% across five projects.}
+            \resumeItem{Troubleshooted bugs along with comprehensive test cases in a dynamic Agile environment, utilizing \textbf{DevOps} tools to improve system reliability.}
+        \resumeItemListEnd     
+        
+        %Qualcomm experience
+        \resumeWorkheading
+            {Software Engineer}{\color{teal}\href{https://www.qualcomm.com/}{\textbf{Qualcomm}}}{Hyderabad, India}{Jun 2020 -- Dec 2022}
+      		\resumeItemListStart
+                    \resumeItem{Engineered an end-to-end full stack web application\textit{(full ownership)} streamlining hardware inventory management, and real-time reports generation, reducing company costs by more than \$100k annually.}
+                    \resumeItem{Led design and development of robust change-based test engine(CBT) for IoT products to curate test suites dynamically, based on code deltas in new builds, optimizing run time by over 70\% for every incoming build. }                    
+                    \resumeItem{Implemented \textbf{RESTful APIs} in Python and integrated them with \textbf{React} frontend to enable seamless CRUD operations on \textbf{MongoDB} CBT suites, achieving a 35\% boost in kernel code coverage.}
+                    \resumeItem{Collaborated with cross-functional teams and enabled API Integration process to 5 different IoT components.}
+                    \resumeItem{Eliminated false positives and devised new scenarios as part of Linux Kernel automation, improving overall QA quality by 18\% and pioneered structured and perpetual documentation.}
+                    \resumeItem{Conducted 10+ knowledge-sharing sessions on \textbf{Python, Design Patterns, and Software Design}, fostering team expertise and promoting best practices across projects.}
+      		\resumeItemListEnd
+        
+        %Qualcomm internship experience
+        \resumeWorkheading
+        {Software Engineer Intern}{\href{https://www.qualcomm.com/}{\color{teal}\textbf{Qualcomm}}}{Hyderabad, India}{Apr 2019 -- Jun 2019}    
+            \resumeItemListStart
+                \resumeItem{Developed a tool to schedule automation suites execution during off-peak hours and paired it with an admin-driven \textbf{Django} dashboard for visualization of results, optimizing hardware utilization by 50\%.}
+            \resumeItemListEnd
+        % \resumeWorkheading
+        % {Machine Learning Intern}{IISc, Bangalore}{Bangalore, India}{Apr 2018 -- Jun 2018}     
+        %     \resumeItemListStart
+        %         \resumeItem{Experimented ML techniques like data augmentation and fine-tuning existing models.}
+        %     \resumeItemListEnd   
+    \resumeSubHeadingListEnd
+%-----------PROJECTS-----------
+\section{PROJECTS}
+    \resumeSubHeadingListStart
+            \resumeProjectHeading
+             {\textbf{Group Chat System}}{\href{https://github.com/CS2510-Distributed-Systems/Advanced-Group-Chat-System}{\faGithub}}{\emph{Go, gRPC, Protocol Buffers, docker}}
+                \resumeItemListStart
+                        \resumeItem{Created a distributed chat system with 5 servers and multiple clients featuring availability, synchronization, eventual consistency, replication, fault/partition tolerance.}
+                        \resumeItem{Incorporated Two-phase locking, Vector timestamps of partial ordering, Bidirectional Streaming.}
+              		\resumeItemListEnd
+            \resumeProjectHeading
+             {\textbf{De-identification of PHI in EHR}}{\href{https://github.com/dilipteja1/de-identification-of-PHI-in-Electronics-Health-Records.-/tree/main}{\faGithub}}{\emph{Pytorch, LLM, Hugging Face}}
+          		    \resumeItemListStart
+                            \resumeItem{Performed transfer learning on pre-trained large language models such as \textbf{BERT, LLaMA} to de-identify protected health information(PHI) in electronic health records(EHR) dataset.}
+                            \resumeItem{Leveraged \textbf{Tokenization, BIO encoding} and other NLP techniques to achieve an average F1 score of 0.98.}
+                        \resumeItemListEnd
+            
+    \resumeSubHeadingListEnd
+
+  %-----------SKILLS-----------
+\section{TECHNICAL SKILLS}
+    \resumeSubHeadingListStart
+        \resumeskill{Programming Languages}{Python, Go, JavaScript, TypeScript, C++, SQL, HTML}
+        \resumeskill{Technologies \& libraries}{React, Redux, Django, Flask, Node, Express, Next, JQuery, TailwindCSS, gRPC,  Protocol Buffers, REST API, FastAPI,  Git, Github, Docker, Prometheus, Grafana, Pytorch, Google Colab, Windows, Linux }
+        \resumeskill{Database \& Cloud Services}{MySQL, PostgreSQL, MongoDB, AWS}
+        \resumeskill{Methodologies}{JIRA, Agile, CI/CD, Software Development Life Cycle(SDLC)}
+    \resumeSubHeadingListEnd
+    
+  %-----------EDUCATION-----------
+\section{EDUCATION} 
+    \resumeSubHeadingListStart
+        % masters education
+        \resumeEducationheading
+            {University of Pittsburgh}{Jan 2023 -- Apr 2025}
+            {Master of Science in Computer Science}{Pittsburgh, PA}
+            \resumeItem{\textbf{Coursework:} Distributed Systems, Advanced Algorithms, Databases, AI, Machine Learning, Natural Language Processing} 
+        \resumeEducationheading
+            {National Institute of Technology, Warangal}{Jun 2016 -- May 2020}
+            {Bachelor of Technology in Electronics and Communication }{Warangal, India}
+            \resumeItem{\textbf{Relevant Coursework:} Data Structures and Algorithms, Computer Networks, Object Oriented Programming(OOP), Statistics}
+    \resumeSubHeadingListEnd
+
+
+%-----------CO-CURRICULARS-----------
+\section{AWARDS AND ACHIEVEMENTS}
+\resumeSubHeadingListStart
+    \resumeItemListStart      
+        	\resumeItem{Recipient of \textbf{Orion Insta} and \textbf{Top Executor Awards} from Senior Director at Qualcomm for contribution and efforts.}
+            
+             \resumeItem{Secured \textbf{second place }in Microsoft's Code.Fun.Do Hackathon among 50+ teams across university.}
+             
+            \resumeItem{Achieved \textbf{All India Rank 602} in IIT-JEE  Mains among over 1.2 million candidates. }
+
+            \resumeItem{Led university badminton team as captain for 2 consecutive years, securing top positions in inter-university tournaments.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+            
+%   \resumeItemListEnd
+% \resumeSubHeadingListEnd
+  
+%   %-----------LEADERSHIP-----------
+% \section{LEADERSHIP}
+%     \resumeSubHeadingListStart        
+%         \resumeSubSubheading       
+%             {\textbf{Batch Representative}}{Aug 2019 -- Mar 2020}
+%             \resumeItemListStart      
+%                 \resumeItem{Represented ECE Class of 2020 in Department UG Council and other department events.}
+%             \resumeItemListEnd 
+%         \resumeSubSubheading   
+%             {\textbf{Sponsorship and Public Relations Sub-Coordinator}}{Aug 2018 -- Mar 2019}
+%             \resumeItemListStart      
+%                 \resumeItem{Organized university's cultural festival 'Spring Spree' by communicating and gathering sponsors.}
+%             \resumeItemListEnd
+%     \resumeSubHeadingListEnd
+
+
+\end{document}
